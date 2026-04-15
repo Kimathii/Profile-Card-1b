@@ -1,6 +1,6 @@
 // ── THEME ──
 (function () {
-  const saved = localStorage.getItem('profile-theme') || 'light';
+  const saved = localStorage.getItem('profile-theme') || 'dark';
   applyTheme(saved, true);
 })();
 

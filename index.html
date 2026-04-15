@@ -1,173 +1,160 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Echioda Mathias Oloche — Profile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echioda Mathias Oloche — Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- THEME TOGGLE — standalone, top-right -->
-  <div class="page-header">
-    <button
-      class="theme-btn"
-      id="theme-btn"
-      onclick="toggleTheme()"
-      aria-label="Switch to dark mode"
-    >
-      <span id="theme-icon">🌙</span>
-      <span id="theme-label">Dark mode</span>
-    </button>
-  </div>
+    <!-- Ambient Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
 
-  <!-- PROFILE CARD -->
-  <article data-testid="test-profile-card" aria-label="Profile card for Echioda Mathias Oloche">
-
-    <!-- Banner -->
-    <div class="card-banner" aria-hidden="true"></div>
-
-    <div class="card-inner">
-
-      <!-- Avatar + Name -->
-      <div class="card-header">
-
-        <figure data-testid="test-user-avatar">
-          <img
-            src="https://i.ibb.co/jPDzbqvd/image.jpg"
-            alt="Portrait of Echioda Mathias Oloche, frontend developer"
-            width="88"
-            height="88"
-            onerror="this.src='https://ui-avatars.com/api/?name=Echioda+Mathias&background=1A6EF5&color=fff&size=200'"
-          />
-        </figure>
-
-        <div class="card-name-block">
-          <header data-testid="test-user-name" aria-label="Name: Echioda Mathias Oloche">
-            Echioda Mathias Oloche
-          </header>
-          <p class="card-handle">@Mathias_Jr · Lagos, Nigeria 🇳🇬</p>
+    <div class="page-container">
+        <!-- THEME TOGGLE -->
+        <div class="page-header">
+            <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Switch theme">
+                <span id="theme-icon">☀️</span>
+                <span id="theme-label">Light mode</span>
+            </button>
         </div>
 
-      </div>
+        <!-- PROFILE CARD -->
+        <article class="profile-card" data-testid="test-profile-card"
+            aria-label="Profile card for Echioda Mathias Oloche">
 
-      <!-- Bio -->
-      <p data-testid="test-user-bio">
-        I'm a Computer Engineer and an intermediate frontend developer with a passion for crafting clean, accessible, and performant web experiences.
-        Fluent in React, Next.js, Vue, Vanilla JS, and WordPress. I bring ideas to life with a sharp eye for
-        detail and a deep respect for the user. Rooted in faith as a Christian, I approach my craft with
-        intentionality and purpose, believing that great software, like great character, is built; one deliberate
-        decision at a time. Currently based in the heart of Lagos, one of Africa's most electrifying tech scenes, I'm
-        constantly shipping, learning, and leveling up.
-      </p>
+            <!-- Banner with animated gradient -->
+            <div class="card-banner" aria-hidden="true"></div>
 
-      <div class="divider" aria-hidden="true"></div>
+            <div class="card-inner">
 
-      <!-- Epoch Time -->
-      <div class="time-row">
-        <span class="time-label">Current time (ms)</span>
-        <span
-          data-testid="test-user-time"
-          id="epoch-time"
-          class="time-value"
-          aria-live="polite"
-          aria-label="Current epoch time in milliseconds"
-        ></span>
-      </div>
+                <!-- Avatar + Name -->
+                <div class="card-header">
+                    <figure class="avatar-container" data-testid="test-user-avatar">
+                        <img data-testid="test-user-avatar" class="avatar-img" src="https://i.ibb.co/jPDzbqvd/image.jpg"
+                            alt="Portrait of Echioda Mathias Oloche, frontend developer" width="100" height="100"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Echioda+Mathias&background=1A6EF5&color=fff&size=200'" />
+                        <div class="avatar-ring"></div>
+                        <div class="status-indicator"></div>
+                    </figure>
 
-      <div class="divider" aria-hidden="true"></div>
+                    <div class="card-name-block">
+                        <header data-testid="test-user-name" aria-label="Name: Echioda Mathias Oloche">
+                            Echioda Mathias <span>Oloche</span>
+                        </header>
+                        <p class="card-handle">@Mathias_Jr • Lagos, Nigeria 🇳🇬</p>
+                    </div>
+                </div>
 
-      <!-- Social Links -->
-      <nav data-testid="test-user-social-links" aria-label="Social media links">
-        <p class="section-label">Connect</p>
-        <ul class="social-list" role="list">
+                <!-- Bio -->
+                <p class="bio" data-testid="test-user-bio">
+                    I'm a Computer Engineer and an intermediate frontend developer with a passion for crafting clean,
+                    accessible, and performant web experiences.
+                    Fluent in React, Next.js, Vue, Vanilla JS, and WordPress. Rooted in faith as a Christian, I approach
+                    my craft with
+                    intentionality and purpose, believing that great software is built one deliberate decision at a
+                    time.
+                </p>
 
-          <li>
-            <a
-              data-testid="test-user-social-linkedin"
-              href="https://www.linkedin.com/in/echioda-mathias-jr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn profile (opens in new tab)"
-            >
-              <!-- LinkedIn icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-              LinkedIn
-            </a>
-          </li>
+                <!-- Epoch Time -->
+                <div class="time-container">
+                    <div class="time-pulse"></div>
+                    <span class="time-label">System Time</span>
+                    <span data-testid="test-user-time" id="epoch-time" class="time-value" aria-live="polite"
+                        aria-label="Current epoch time in milliseconds"></span>
+                </div>
 
-          <li>
-            <a
-              data-testid="test-user-social-github"
-              href="https://github.com/Kimathii"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profile (opens in new tab)"
-            >
-              <!-- GitHub icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-              </svg>
-              GitHub
-            </a>
-          </li>
+                <!-- Social Links -->
+                <nav class="social-nav" data-testid="test-user-social-links" aria-label="Social media links">
+                    <p class="section-label">Let's Connect</p>
+                    <ul class="social-list" role="list">
+                        <li>
+                            <a data-testid="test-user-social-linkedin"
+                                href="https://www.linkedin.com/in/echioda-mathias-jr/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+                                <!-- LinkedIn icon -->
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-github" href="https://github.com/Kimathii" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
+                                <!-- GitHub icon -->
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-twitter" href="https://x.com/_Mathias_Jr_" target="_blank"
+                                rel="noopener noreferrer" aria-label="X (Twitter) profile (opens in new tab)">
+                                <!-- X / Twitter icon -->
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                                </svg>
+                                <span>X / Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-          <li>
-            <a
-              data-testid="test-user-social-twitter"
-              href="https://x.com/_Mathias_Jr_"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter) profile (opens in new tab)"
-            >
-              <!-- X / Twitter icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
-              </svg>
-              X / Twitter
-            </a>
-          </li>
+                <!-- Hobbies & Dislikes -->
+                <div class="lists-grid">
+                    <section class="list-section" aria-labelledby="hobbies-title">
+                        <div class="section-header">
+                            <span class="icon-sparkle">✨</span>
+                            <p class="list-title" id="hobbies-title">Hobbies & Interests</p>
+                        </div>
+                        <ul class="hobby-list" data-testid="test-user-hobbies" role="list"
+                            aria-labelledby="hobbies-title">
+                            <li>Chess</li>
+                            <li>Football</li>
+                            <li>Outdoors</li>
+                            <li>Movies</li>
+                            <li>Books</li>
+                        </ul>
+                    </section>
 
-        </ul>
-      </nav>
+                    <section class="list-section" aria-labelledby="dislikes-title">
+                        <div class="section-header">
+                            <span class="icon-warning">⚡</span>
+                            <p class="list-title" id="dislikes-title">Dislikes</p>
+                        </div>
+                        <ul class="dislike-list" data-testid="test-user-dislikes" role="list"
+                            aria-labelledby="dislikes-title">
+                            <li>Bad internet</li>
+                            <li>Inactive teammates</li>
+                            <li>Poor handoffs</li>
+                            <li>Scope creep</li>
+                            <li>GLO network</li>
+                        </ul>
+                    </section>
+                </div>
 
-      <div class="divider" aria-hidden="true"></div>
+            </div><!-- /.card-inner -->
+        </article>
+    </div>
 
-      <!-- Hobbies & Dislikes -->
-      <div class="lists-grid">
-
-        <section aria-labelledby="hobbies-title">
-          <p class="list-title" id="hobbies-title">Hobbies</p>
-          <ul data-testid="test-user-hobbies" role="list" aria-labelledby="hobbies-title">
-            <li>Chess</li>
-            <li>Football</li>
-            <li>Outdoors</li>
-            <li>Movies</li>
-            <li>Books</li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="dislikes-title">
-          <p class="list-title" id="dislikes-title">Dislikes</p>
-          <ul data-testid="test-user-dislikes" role="list" aria-labelledby="dislikes-title">
-            <li>Bad internet</li>
-            <li>Inactive teammates</li>
-            <li>Poor design handoffs</li>
-            <li>Scope creep</li>
-            <li>GLO Specifically</li>
-          </ul>
-        </section>
-
-      </div>
-
-    </div><!-- /.card-inner -->
-  </article>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
